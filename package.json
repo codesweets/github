@@ -1,0 +1,33 @@
+{
+  "name": "@codesweets/github",
+  "version": "1.0.0",
+  "description": "Tasks that interact directly with GitHub.",
+  "main": "bin/main.js",
+  "types": "src/main.ts",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesweets/github.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Trevor Sundberg",
+  "license": "MIT",
+  "dependencies": {
+    "@codesweets/core": "^1.0.8",
+    "@codesweets/file": "^1.0.1",
+    "@codesweets/git": "^1.0.0",
+    "@octokit/rest": "^16.28.2",
+    "@types/node": "^12.0.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "codesweets": "^1.0.9",
+    "eslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
