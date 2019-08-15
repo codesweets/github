@@ -2,8 +2,8 @@ import {TaskMeta, TaskWithData} from "@codesweets/core";
 import Octokit from "@octokit/rest";
 
 export interface GitHubAuthorizationData {
-  username: string;
-  password_or_token: string;
+  username?: string;
+  password_or_token?: string;
 }
 
 export class GitHubAuthorization extends TaskWithData<GitHubAuthorizationData> {
@@ -16,14 +16,20 @@ export class GitHubAuthorization extends TaskWithData<GitHubAuthorizationData> {
   public octokit: Octokit
 
   protected async onInitialize () {
-    this.octokit = new Octokit({
-      auth: {
-        on2fa: () => {
-          throw new Error("Two factor authentication is not yet supported");
-        },
-        password: this.data.password_or_token,
-        username: this.data.username
+    const getAuth = () => {
+      if (this.data.username || this.data.password_or_token) {
+        return {
+          on2fa: () => {
+            throw new Error("Two factor authentication is not yet supported");
+          },
+          password: this.data.password_or_token,
+          username: this.data.username
+        };
       }
+      return null;
+    };
+    this.octokit = new Octokit({
+      auth: getAuth()
     });
   }
 }
