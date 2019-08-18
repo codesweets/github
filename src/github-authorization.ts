@@ -10,7 +10,12 @@ export class GitHubAuthorization extends TaskWithData<GitHubAuthorizationData> {
   public static meta: TaskMeta = new TaskMeta({
     construct: GitHubAuthorization,
     schema: require("ts-schema!./github-authorization.ts?GitHubAuthorizationData"),
-    typename: "GitHubAuthorization"
+    typename: "GitHubAuthorization",
+    uiSchema: {
+      password_or_token: {
+        "ui:widget": "password"
+      }
+    }
   })
 
   public octokit: Octokit
