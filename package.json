@@ -1,6 +1,6 @@
 {
   "name": "@codesweets/github",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tasks that interact directly with GitHub.",
   "keywords": [
     "codesweets-tasks"
