@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@codesweets/core": "^1.0.37",
-    "@codesweets/file": "^1.0.8",
+    "@codesweets/file": "^1.0.9",
     "@codesweets/git": "^1.0.4",
     "@octokit/rest": "^16.28.2",
     "@types/node": "^12.0.10"
