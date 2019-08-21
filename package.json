@@ -21,9 +21,9 @@
   "author": "Trevor Sundberg",
   "license": "MIT",
   "dependencies": {
-    "@codesweets/core": "^1.0.32",
-    "@codesweets/file": "^1.0.6",
-    "@codesweets/git": "^1.0.1",
+    "@codesweets/core": "^1.0.37",
+    "@codesweets/file": "^1.0.8",
+    "@codesweets/git": "^1.0.4",
     "@octokit/rest": "^16.28.2",
     "@types/node": "^12.0.10"
   },
